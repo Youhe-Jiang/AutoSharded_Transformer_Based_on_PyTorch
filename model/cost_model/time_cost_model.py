@@ -12,5 +12,3 @@ class TimeCostModelPerLayer:
         else:
             cost = (0.0024 + 0.006 * self.fsdp_level) * pow((self.d_model / 1024), 2)
         return cost
-
-memcost = TimeCostModelPerLayer(d_model=512, coder_type='decoder', fsdp_level=4).output_cost()
