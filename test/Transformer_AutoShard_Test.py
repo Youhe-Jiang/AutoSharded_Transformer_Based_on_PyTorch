@@ -2,10 +2,7 @@ import torch
 from fairscale.nn.data_parallel import FullyShardedDataParallel as FSDP
 from torch.optim import Adam
 from torch.testing._internal.common_distributed import skip_if_lt_x_gpu
-from torch.testing._internal.common_fsdp import (
-    FSDPTest,
-    get_full_params,
-)
+from FSDP_Test import FSDPTest
 from torch.testing._internal.common_utils import TEST_WITH_DEV_DBG_ASAN, run_tests
 from fairscale.nn.checkpoint.checkpoint_activations import checkpoint_wrapper, disable_checkpointing
 import time
