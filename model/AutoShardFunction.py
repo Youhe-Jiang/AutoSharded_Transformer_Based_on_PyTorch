@@ -70,8 +70,3 @@ class AutoShardFunction:
                 decoder_idx.append(index[i])
         memory_cost = memory_cost[time_cost.index(min(time_cost))]
         return encoder_idx, decoder_idx
-
-#encoder_idx, decoder_idx = AutoShardFunction(d_model=1536, num_nodes=4, num_encoder_layers=24, num_decoder_layers=24, max_memory=10000).auto_shard()
-#print(encoder_idx)
-#print(decoder_idx)
-
